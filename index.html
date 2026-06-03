@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Debarati Pramanik - Frontend Developer Portfolio">
+    <title>Debarati Pramanik | Frontend Developer</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Particles Placeholder -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Debarati<span>.</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+
+                <p class="greeting">Hello, It's Me</p>
+                <h1 class="name">Debarati Pramanik</h1>
+                <div class="hero-image-container reveal">
+                    <div class="hexagon-wrapper">
+                        <!-- Placeholder for image, using a gradient for now -->
+                        <div class="hexagon-img"></div>
+                    </div>
+                </div>
+                <h2 class="role">And I'm a <span class="typing-text">Frontend Developer</span><span
+                        class="cursor">|</span></h2>
+                <p class="summary">To get an opportunity where I can make the best of my potential and contribute to the
+                    organization's growth. Seeking a position in a company where I can launch my career and build a
+                    valuable skill set.</p>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/debarati-pramanik-aa6367413?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/pramanikdebarati94-boop" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <!--<a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>-->
+                    <a href="mailto:pramanikdebarati94@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="CV.pdf" download class="btn btn-primary" id="downloadCvBtn">Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="index2.html" class="btn btn-outline">Text Resume</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title reveal">About <span>Me</span></h2>
+            <div class="about-container reveal">
+                <div class="about-image">
+                    <img src="img.png" alt="Debarati Pramanik"
+                        style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: var(--glow-shadow);">
+                </div>
+                <div class="about-text">
+                    <h3>Frontend Developer</h3>
+                    <p>I am a dedicated and laborious Frontend Developer with a solid foundation in web technologies
+                        including HTML5, CSS3, JavaScript, PHP, and Python. I completed my BCA from IEM in 2021. As a
+                        fresher, I bring a quick-learning attitude, strong decision-making skills, and complex
+                        problem-solving abilities to the table.</p>
+                    <p>My goals are continuous skill acquisition, performance improvement, and applying my knowledge
+                        effectively in progressive environments.</p>
+                    <div class="personal-info">
+                        <p><strong>Birthday:</strong> 31/07/1994</p>
+                        <p><strong>Email:</strong> pramanikdebarati94@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 7059510428</p>
+                        <p><strong>City:</strong> Konnagar, Hooghly (West Bengal)</p>
+                    </div>
+                    <a href="#services" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title reveal">My <span>Skills</span></h2>
+            <div class="skills-container reveal">
+                <!-- Technical Skills -->
+                <div class="skills-col">
+                    <h3 class="skills-subtitle"><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                    <div class="skill-bars" id="techSkillsContainer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skills-col">
+                    <h3 class="skills-subtitle"><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="soft-skills-grid" id="softSkillsContainer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2 class="section-title reveal">My <span>Services</span></h2>
+            <div class="services-container reveal">
+                <div class="service-card glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern, and performant web applications using the latest technologies and
+                        best practices.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="service-card glass-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring your website looks beautiful and functions perfectly across all devices and screen
+                        sizes.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="service-card glass-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Implementation</h3>
+                    <p>Translating design prototypes into highly interactive and pixel-perfect frontend code.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="service-card glass-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Computer Application Faculty</h3>
+                    <p>Providing comprehensive instruction in computer applications, programming fundamentals, and IT
+                        tools, backed by a decade of dedicated teaching experience.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Projects Section 
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title reveal">Latest <span>Projects</span></h2>
+
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <div class="portfolio-grid reveal">
+                 
+                <div class="portfolio-card glass-card" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>E-Commerce Platform</h4>
+                        <p>HTML, CSS, JS</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card" data-category="design">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Dashboard UI</h4>
+                        <p>HTML, CSS</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Landing Page</h4>
+                        <p>HTML, CSS, JS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <!-- Education & Experience Timeline -->
+        <section id="timeline" class="timeline-section">
+            <h2 class="section-title reveal">Education & <span>Experience</span></h2>
+            <div class="timeline-container reveal">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card experience">
+                            <div class="timeline-date">Current</div>
+                            <h3>Frontend Developer</h3>
+                            <h4>Fresher</h4>
+                            <p>Seeking an opportunity to utilize my skills and contribute to the organization's growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card experience">
+                            <div class="timeline-date">10 Years Experience</div>
+                            <h3>Teacher</h3>
+                            <h4>Computer Application & English</h4>
+                            <p>Provided comprehensive instruction in Computer Application and English over a period of
+                                10 years.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2021</div>
+                            <h3>Bachelor of Computer Application (BCA)</h3>
+                            <h4>Institute of Engineering and Management (IEM), Kolkata</h4>
+                            <p>Makaut University - Graduated with 60.9% marks.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2014</div>
+                            <h3>Higher Secondary (10+2)</h3>
+                            <h4>Hiralal Paul Balika Vidyalaya School</h4>
+                            <p>WBCHSE - Passed with 56% marks.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2011</div>
+                            <h3>Secondary (10th)</h3>
+                            <h4>Hiralal Paul Balika Vidyalaya School</h4>
+                            <p>WBBSE - Passed with 68% marks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title reveal">Contact <span>Me!</span></h2>
+            <div class="contact-container reveal">
+                <div class="contact-info glass-card">
+                    <h3>Get In Touch</h3>
+                    <p>I'm currently available for work. Let's connect!</p>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Konnagar, Hooghly (West Bengal)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>pramanikdebarati94@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7059510428</span>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-card" id="contactForm">
+                    <div class="input-row">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-row">
+                        <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
+                    </div>
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+
+                    <div class="form-status" id="formStatus"></div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Developed by Debarati Pramanik. All Rights Reserved.</p>
+        </div>
+        <a href="#home" class="scroll-top" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Add particles.js for background effect -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Debarati Pramanik - Resume">
+    <title>Debarati Pramanik | Resume</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-color: #00f0ff;
+            --border-color: #334155;
+        }
+        
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent-color: #0ea5e9;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 2rem 1rem;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .header {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .content-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items:baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .content-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .content-subtitle {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .content-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(0, 240, 255, 0.1);
+            color: var(--accent-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        [data-theme="light"] .skill-tag {
+            background-color: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .actions {
+            text-align: center;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 15px var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                border: none;
+            }
+            .actions, .theme-toggle {
+                display: none;
+            }
+            :root {
+                --accent-color: #000;
+                --text-muted: #333;
+                --text-main: #000;
+                --card-bg: #fff;
+                --border-color: #ddd;
+            }
+            .skill-tag {
+                border: 1px solid #333;
+                color: #000;
+                background: none;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="actions">
+        <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        <a href="CV.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume PDF</a>
+    </div>
+
+    <div class="resume-container">
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Debarati Pramanik</h1>
+            <p>Frontend Developer</p>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> <a href="mailto:pramanikdebarati94@gmail.com">pramanikdebarati94@gmail.com</a></span>
+                <span><i class="fas fa-phone"></i> +91 7059510428</span>
+                <span><i class="fas fa-map-marker-alt"></i> Konnagar, Hooghly (West Bengal)</span>
+            </div>
+        </header>
+
+        <!-- Profile Summary -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-user-circle"></i> Career Objective</h2>
+            <p style="color: var(--text-muted); line-height: 1.8;">
+                To get an opportunity where I can make the best of my potential and contribute to the organization's growth. Seeking a position in a company where I can launch my career and build a valuable skill set. To be a part of progressive and renowned organization that gives a scope to enhance my knowledge and my skills.
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <div class="content-block">
+                <div class="content-header">
+                    <span class="content-title">Frontend Developer</span>
+                    <span class="content-date">Current</span>
+                </div>
+                <span class="content-subtitle">Fresher</span>
+                <ul>
+                    <li>Focused on building modern, responsive, and dynamic web interfaces.</li>
+                    <li>Seeking to apply acquired skills in HTML, CSS, JavaScript in real-world projects.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <div class="content-header">
+                    <span class="content-title">Computer Application Faculty</span>
+                    <span class="content-date">10 Years Experience</span>
+                </div>
+                <span class="content-subtitle">Teaching & IT Instruction</span>
+                <ul>
+                    <li>Providing comprehensive instruction in computer applications, programming fundamentals, and IT tools, backed by a decade of dedicated teaching experience.</li>
+                    <li>Developed engaging lesson plans and fostered a positive learning environment for students.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="content-block">
+                <div class="content-header">
+                    <span class="content-title">Bachelor of Computer Application (BCA)</span>
+                    <span class="content-date">2021</span>
+                </div>
+                <span class="content-subtitle">Institute of Engineering and Management (IEM, Sector-V, Kolkata) - Makaut University</span>
+                <ul>
+                    <li>Graduated with 60.9% marks.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <div class="content-header">
+                    <span class="content-title">Higher Secondary (10+2)</span>
+                    <span class="content-date">2014</span>
+                </div>
+                <span class="content-subtitle">Hiralal Paul Balika Vidyalaya School (WBCHSE)</span>
+                <ul>
+                    <li>Passed with 56% marks.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <div class="content-header">
+                    <span class="content-title">Secondary (Class 10th)</span>
+                    <span class="content-date">2011</span>
+                </div>
+                <span class="content-subtitle">Hiralal Paul Balika Vidyalaya School (WBBSE)</span>
+                <ul>
+                    <li>Passed with 68% marks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills & Strengths -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-tools"></i> Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Technical Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Advance Excel</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Soft Skills & Strengths</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Laborious</span>
+                        <span class="skill-tag">Dedicated</span>
+                        <span class="skill-tag">Focused</span>
+                        <span class="skill-tag">Punctual</span>
+                        <span class="skill-tag">Complex Problem Solver</span>
+                        <span class="skill-tag">Good Communicator</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Additional Info -->
+        <section class="section">
+            <div class="skills-grid">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fas fa-language"></i> Languages</h2>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li>Bengali</li>
+                        <li>English</li>
+                        <li>Hindi</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fas fa-heart"></i> Hobbies</h2>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li>Watching Movies</li>
+                        <li>Dancing</li>
+                        <li>Gardening</li>
+                        <li>Collecting Pens</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Simple Theme Toggle for Resume Page
+        const themeBtn = document.getElementById('themeToggleBtn');
+        const icon = themeBtn.querySelector('i');
+        const html = document.documentElement;
+
+        // Check LocalStorage
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            updateIcon(savedTheme);
+        }
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'light') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
+</html>
